@@ -13,6 +13,6 @@ export default {
   name: 'home',
   components: {
     workList
-  },
+  }
 }
 </script>

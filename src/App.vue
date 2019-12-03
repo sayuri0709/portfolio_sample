@@ -11,3 +11,12 @@
 <style lang="scss">
 @import "@/assets/scss/style.scss";
 </style>
+
+<script>
+export default {
+  created() {
+    console.log(this.$store.state.count)
+    this.$store.commit('increment')
+  }
+}
+</script>

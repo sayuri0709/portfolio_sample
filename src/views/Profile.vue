@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>Profile</h1>
+  <div class="main about">
+    <mainTtl pageTtl='Profile'></mainTtl>
     <div class="profBox">
       <h2>{{name}}</h2>
       <dl>
@@ -22,7 +22,11 @@
   </div>
 </template>
 <script>
+import mainTtl from '@/components/mainTtl.vue'
 export default {
+  components: {
+    mainTtl
+  },
   data() {
     return {
       name: 'Hamada Sayuri',

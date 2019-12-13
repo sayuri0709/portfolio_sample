@@ -22,13 +22,31 @@ body {
   color: #fff;
 }
 #nav {
-  padding: 30px;
+  background: #474747;
+  padding: 20px; 
+  display: flex;
+  justify-content: flex-end;
+  p {
+    a {
+      display: block;
+      width: 100px;
+      font-size: 1.6rem;
+      text-align: center;
+      padding: 10px 0 13px;
+      background: #000;
+      @include transition;
+      line-height: 1;
+      &.router-link-exact-active {
+        background-color: #e8843b;
+        text-decoration: none;
+      }
+    }
+  }
   a {
     font-weight: bold;
     color: #fff;
-    &.router-link-exact-active {
-      color: #d8915e;
-      text-decoration: none;
-    }
   }
+}
+.main {
+  padding: 50px 0;
 }

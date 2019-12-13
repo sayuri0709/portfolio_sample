@@ -84,6 +84,7 @@ export default {
         padding: 0;
         white-space: pre-wrap;
         font-weight: 500;
+        line-height: 1.2;
     }
     figure {
         margin: 0;

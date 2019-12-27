@@ -1,22 +1,37 @@
 <template>
-  <div class="main about">
+  <div class="main">
     <mainTtl pageTtl='Profile'></mainTtl>
     <div class="profBox">
+      <figure class="profImage"><img v-bind:src="require('@/assets/images/'+ image)" v-bind:alt="name"></figure>
+
       <h2>{{name}}</h2>
+      <dl>
+        <dt>Age</dt>
+        <dd>{{age}}</dd>
+      </dl>
       <dl>
         <dt>Job</dt>
         <dd>
-          <p v-for="job in jobs" v-bind:key="job">{{job}}</p>
+          <ul>
+            <li v-for="job in jobs" v-bind:key="job">{{job}}</li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>Hobby</dt>
+        <dd>
+          <ul>
+            <li v-for="hobby in hobbys" v-bind:key="hobby">{{hobby}}</li>
+          </ul>
         </dd>
       </dl>
       <dl>
         <dt>Skill</dt>
         <dd>
-          <ul v-for="skill in mySkillList" v-bind:key="skill.skillId">
-            <li><b>{{skill.skilName}}</b>{{ skill.skillLevel | skillStar}}</li>
+          <ul>
+            <li v-for="skill in mySkillList" v-bind:key="skill.skillId"><b>{{skill.skilName}}</b>{{ skill.skillLevel | skillStar }}</li>
           </ul>
-        </dd>
-        
+        </dd> 
       </dl>
     </div>
   </div>
@@ -30,7 +45,9 @@ export default {
   data() {
     return {
       name: 'Hamada Sayuri',
+      image:'img_profile.jpg',
       jobs: ['HTMLコーダー', 'フロントエンドエンジニア'],
+      hobbys: ['お酒を飲む', '映画を見る', 'ライブに行く'],
       age: 28,
       mySkillList: [
         {
@@ -94,68 +111,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-  .profImage{
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto;
-    line-height: 0;
-    position: relative;
-    img {
-      width: 100%;
-      position: absolute;
-      top:50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-    }
-  }
-  .profBox{
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    h2 {
-      font-size: 22px;
-      margin: 15px auto 30px;
-    }
-    dl {
-      margin-top: 15px;
-      display: flex;
-      text-align: left;
-      align-items: flex-start;
-      dt {
-        width: 20%;
-        font-size: 18px;
-        font-weight: 600;
-      }
-      dd {
-        width: 80%;
-        margin: 0;
-        font-size: 16px;
-        padding: 0;
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style-type: none;
-          li {
-            & + li {
-              margin-top: 10px;;
-            }
-            b {
-              display: inline-block;
-              width: 6em;
-              margin-right: 15px;
-              text-align: left;
-            }
-          }
-        }
-        a {
-          color: #fff;
-        }
-      }
-    }
-  }
-
+<style lang="scss">
+@import "@/assets/scss/profile.scss";
 </style>
 

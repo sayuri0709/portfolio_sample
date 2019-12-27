@@ -1,0 +1,79 @@
+@charset "utf-8";
+@import "base/_setting.scss";
+.profBox{
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  .profImage{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 40px;
+    line-height: 0;
+    position: relative;
+    @include sp {
+      width: 60vw;
+      height: 60vw;
+    }
+    img {
+      width: 100%;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  h2 {
+    font-size: 34px;
+    margin: 0 auto 60px;
+    text-align: center;
+    @include sp {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  }
+  dl {
+    text-align: center;
+    & + dl {
+      margin-top: 50px;
+      @include sp {
+        margin-top: 40px;
+      }
+    }
+    dt {
+      font-size: 24px;
+      font-weight: 600;
+      padding-bottom: 20px;
+      position: relative;
+      @include sp {
+        font-size: 20px;
+        padding-bottom: 15px;
+      }
+    }
+    dd {
+      margin: 0;
+      font-size: 16px;
+      padding: 0;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          & + li {
+            margin-top: 10px;;
+          }
+          b {
+            display: inline-block;
+            width: 6em;
+            margin-right: 15px;
+            text-align: left;
+          }
+        }
+      }
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

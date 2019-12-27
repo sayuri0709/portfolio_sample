@@ -18,6 +18,7 @@ export default {
   font-size: 2.0rem;
   padding-bottom: 15px;
   position: relative;
+  margin-bottom: 60px;
   &::after {
     content: "";
     width: 40px;

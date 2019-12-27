@@ -1,0 +1,55 @@
+
+{
+  "image": "img_profile.jpg",
+  "name": "Hamada Sayuri",
+  "jobs": ["HTMLコーダー", "フロントエンドエンジニア"],
+  "age": 28,
+  "hobbys": ["お酒を飲む", "映画を見る", "ライブに行く"],
+  "mySkillList": [
+    {
+      "skillId": 1,
+      "skilName": "HTML",
+      "skillLevel": 5
+    },
+    {
+      "skillId": 2,
+      "skilName": "CSS",
+      "skillLevel": 5
+    },
+    {
+      "skillId": 3,
+      "skilName": "JavaScript",
+      "skillLevel": 3
+    },
+    {
+      "skillId": 4,
+      "skilName": "Vue.js",
+      "skillLevel": 3
+    },
+    {
+      "skillId": 5,
+      "skilName": "jQuery",
+      "skillLevel": 4
+    },
+    {
+      "skillId": 6,
+      "skilName": "PHP",
+      "skillLevel": 2
+    },
+    {
+      "skillId": 7,
+      "skilName": "WordPress",
+      "skillLevel": 2
+    },
+    {
+      "skillId": 8,
+      "skilName": "Photoshop",
+      "skillLevel": 5
+    },
+    {
+      "skillId": 9,
+      "skilName": "Illustrator",
+      "skillLevel": 2
+    }
+  ]
+}

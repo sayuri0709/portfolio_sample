@@ -21,6 +21,13 @@ body {
 #app {
   color: #fff;
 }
+#wrapper {
+  opacity: 0;
+  transition: .6s ease .2s;
+  &.load {
+    opacity: 1;
+  }
+}
 #nav {
   background: #474747;
   padding: 20px; 
@@ -49,4 +56,37 @@ body {
 }
 .main {
   padding: 50px 0;
+}
+
+/* transition
+----------------------------------------*/
+.router-transition-enter-active {
+  animation: fadeIn .5s;
+  animation-delay: .5s;
+  opacity: 0;
+}
+.router-transition-leave-active {
+  animation: fadeOut .5s;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
 }

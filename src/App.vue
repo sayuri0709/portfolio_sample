@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <p><router-link to="/">Works</router-link></p>
-      <p><router-link to="/profile">Profile</router-link></p>
+    <div id="wrapper" v-bind:class="{ load: isLoad }">
+      <div id="nav">
+        <p><router-link to="/">Works</router-link></p>
+        <p><router-link to="/profile">Profile</router-link></p>
+      </div>
+      <transition name="router-transition">
+      <router-view/>
+      </transition>
     </div>
-    <router-view/>
   </div>
 </template>
 
@@ -14,10 +18,21 @@
 
 <script>
 export default {
-  created() {
-    console.log(this.$store.state.count)
-    this.$store.commit('increment')
-    console.log(this.$store.state.count)
+  data(){
+    return {
+      isLoad: false
+    }
+  },
+  mounted() {
+    this.windowLoad();
+  },
+  methods: {
+    windowLoad: function() {
+      const root = this;
+      window.addEventListener('load', ()=>{
+        root.isLoad = true;
+      });
+    }
   }
 }
 </script>

@@ -4,7 +4,7 @@
     <div class="item" v-for="work in myWorkList" v-bind:key="work.id">
         <a v-bind:href="work.url" target="_blank"> 
             <h2>{{work.sitename}}</h2>
-            <figure><img v-bind:src="require('@/assets/images/top/'+ work.fileName)" v-bind:alt="work.sitename"></figure>
+            <figure><img v-bind:src="require('@/assets/images/works/'+ work.fileName)" v-bind:alt="work.sitename"></figure>
         </a>
     </div>
   </div>
@@ -69,7 +69,7 @@ export default {
 }
 .item {
     width: 31%;
-    margin: 30px 0 0 0;
+    margin: 0 0 30px;
     padding: 0;
     a { 
         display: flex;

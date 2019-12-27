@@ -1,16 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import profileData from './modules/profileData';
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
-    state: {
-        count: 0
-    },
-    mutations: {
-        increment(state) {
-            state.count;
-        }
+export default new Vuex.Store({
+    modules: {
+        profileData
     }
-})
-export default store
+});
